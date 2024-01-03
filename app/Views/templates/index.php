@@ -39,12 +39,12 @@
     <link href="<?= base_url(); ?>../assets/css/user.min.css" type="text/css" rel="stylesheet" id="user-style-default">
 
     <link href="<?= base_url(); ?>../vendors/datatable/css/datatables.min.css" type="text/css" rel="stylesheet">
-    <link href="<?= base_url(); ?>../vendors/datatable/css/dataTables.bootstrap4.min.css" type="text/css" rel="stylesheet">
-    <link href="<?= base_url(); ?>../vendors/datatable/Buttons-2.2.3/css/buttons.bootstrap4.min.css" type="text/css" rel="stylesheet">
+    <link href="<?= base_url(); ?>../vendors/datatable/css/dataTables.bootstrap5.min.css" type="text/css" rel="stylesheet">
+    <link href="<?= base_url(); ?>../vendors/datatable/Buttons-2.2.3/css/buttons.bootstrap5.min.css" type="text/css" rel="stylesheet">
     <link href="<?= base_url(); ?>../vendors/choices/choices.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>../vendors/flatpickr/flatpickr.min.css" rel="stylesheet" />
     <link href="<?= base_url(); ?>../vendors/dropzone/min/dropzone.min.css" rel="stylesheet" />
-
+    <link href="<?= base_url(); ?>../vendors/datatable/Responsive-2.3.0/css/responsive.bootstrap5.min.css" rel="stylesheet"/>
     <script>
         var phoenixIsRTL = window.config.config.phoenixIsRTL;
         if (phoenixIsRTL) {
@@ -203,10 +203,12 @@
     <script src="<?= base_url(); ?>../vendors/datatable/jquery.dataTables.min.js"></script>
     <script src="<?= base_url(); ?>../vendors/datatable/js/datatables.min.js"></script>
     <script src="<?= base_url(); ?>../vendors/datatable/Buttons-2.2.3/js/dataTables.buttons.min.js"></script>
-    <script src="<?= base_url(); ?>../vendors/datatable/Buttons-2.2.3/js/buttons.bootstrap4.min.js"></script>
+    <script src="<?= base_url(); ?>../vendors/datatable/Buttons-2.2.3/js/buttons.bootstrap5.min.js"></script>
     <script src="<?= base_url(); ?>../vendors/choices/choices.min.js"></script>
     <script src="<?= base_url(); ?>../assets/js/flatpickr.js"></script>
     <script src="<?= base_url(); ?>../vendors/dropzone/min/dropzone.min.js"></script>
+    <script src="<?= base_url(); ?>../vendors/datatable/Responsive-2.3.0/js/dataTables.responsive.min.js"></script>
+    <script src="<?= base_url(); ?>../vendors/datatable/Responsive-2.3.0/js/responsive.bootstrap5.min.js"></script>
     <?php
     helper('html');
     $uri = current_url(true);
