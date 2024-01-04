@@ -225,6 +225,83 @@ $(document).ready(function () {
       },
     ],
   });
+  var tb_desain = $(".table-desain").DataTable({
+    dom:
+      "<'row mb-5'<'col-lg-6 col-md-6'B><'col-lg-6 col-md-6'f>>" +
+      "<'row'<'col-sm-12'tr>>" +
+      "<'row'<'col-sm-12 col-md-4'l><'col-sm-12 col-md-4'i><'col-sm-12 col-md-4'p>>",
+    lengthMenu: [
+      [10, 25, 50, -1],
+      [10, 25, 50, "All"],
+    ],
+    // fixedHeader: {
+    //     header: !0,
+    //     headerOffset: $(".header-navbar").outerHeight()
+    // },
+    search: {
+      regex: true,
+    },
+    buttons: [
+      {
+        text: "<i class='fa fa-plus'></i> Tambah Desain",
+        className: "btn-sm me-1  btn-phoenix-primary",
+        attr: {
+          "data-bs-toggle": "offcanvas",
+          "data-bs-target": "#desainOffcanvas",
+          "aria-controls": "desainOffcanvas",
+        },
+        action: function (e, dt, node, config) {},
+      },
+      {
+        extend: "print",
+        text: "",
+        tag: "span",
+        className: "fa fa-print",
+        exportOptions: {
+          stripHtml: false,
+          // columns: [1, 2, 3]
+          columns: [":visible"],
+        },
+        orientation: "landscape",
+        pageSize: "LEGAL",
+        autoPrint: false,
+        customize: function (win) {
+          $(win.document.body).css("font-size", "10pt");
+
+          $(win.document.body)
+            .find("table")
+            .addClass("compact")
+            .css("font-size", "inherit");
+
+          var last = null;
+          var current = null;
+          var bod = [];
+
+          var css = "@page { size: landscape; }",
+            head =
+              win.document.head || win.document.getElementsByTagName("head")[0],
+            style = win.document.createElement("style");
+
+          style.type = "text/css";
+          style.media = "print";
+
+          if (style.styleSheet) {
+            style.styleSheet.cssText = css;
+          } else {
+            style.appendChild(win.document.createTextNode(css));
+          }
+
+          head.appendChild(style);
+        },
+      },
+      {
+        extend: "colvis",
+        text: "",
+        tag: "span",
+        className: "fa fa-eye-slash",
+      },
+    ],
+  });
 
   const choicesTagProses = new Choices("#tag_proses", {
     removeItemButton: true,

@@ -23,19 +23,128 @@
                     <div class="card-body">
                         <h4 class="card-title">Desain</h4>
                         <div class="table-responsive mt-1">
-                            <table class="table table-striped table-bordered mt-1 display nowrap table-item-desain" cellspacing="0" width="100%">
+                            <table class="table cell-border display table-compact table-hover table-striped table-desain" cellspacing="0" width="100%">
                                 <thead>
                                     <tr>
                                         <th></th>
-                                        <th>No</th>
+                                        <th>NO</th>
                                         <th>ID</th>
-                                        <th>Nama</th>
-                                        <th>Segment</th>
-                                        <th>Ex Proses</th>
-                                        <th>Efektif</th>
-                                        <th>Deskripsi</th>
+                                        <th>KODE</th>
+                                        <th>DESAIN</th>
+                                        <th>VERSI</th>
+                                        <th>KATEGORI</th>
+                                        <th>SEGMEN</th>
+                                        <th>STATUS</th>
+                                        <th>EDATE</th>
+                                        <th>DESKRIPSI</th>
                                     </tr>
                                 </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="align-middle white-space-nowrap pe-0 ps-4 btn-reveal-trigger">
+                                            <div class="font-sans-serif btn-reveal-trigger position-static">
+                                                <button class="btn btn-sm dropdown-toggle dropdown-caret-none transition-none btn-reveal fs--2" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent">
+                                                    <span class="fas fa-ellipsis-h fs--2"></span>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end py-2">
+                                                    <a class="dropdown-item" href="#!">View</a>
+                                                    <a class="dropdown-item" data-bs-toggle="offcanvas" href="#formulasiOffcanvas" role="button" aria-controls="formulasiOffcanvas">Edit</a>
+                                                    <a class="dropdown-item" data-bs-toggle="offcanvas" href="#resepOffcanvas" role="button" aria-controls="resepOffcanvas">Resep</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item text-danger" href="#!">Remove</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>1</td>
+                                        <td>VsdG8</td>
+                                        <td class="fw-bolder">D/Arco TA.1</td>
+                                        <td>Arco TA</td>
+                                        <td>1</td>
+                                        <td><span class="badge badge-phoenix badge-phoenix-success">DIP</span></td>
+                                        <td>OTO</td>
+                                        <td><span class="badge badge-phoenix badge-phoenix-success me-1">E</span></td>
+                                        <td>27/11/23</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-middle white-space-nowrap pe-0 ps-4 btn-reveal-trigger">
+                                            <div class="font-sans-serif btn-reveal-trigger position-static">
+                                                <button class="btn btn-sm dropdown-toggle dropdown-caret-none transition-none btn-reveal fs--2" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent">
+                                                    <span class="fas fa-ellipsis-h fs--2"></span>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end py-2">
+                                                    <a class="dropdown-item" href="#!">View</a>
+                                                    <a class="dropdown-item" data-bs-toggle="offcanvas" href="#formulasiOffcanvas" role="button" aria-controls="formulasiOffcanvas">Edit</a>
+                                                    <a class="dropdown-item" data-bs-toggle="offcanvas" href="#resepOffcanvas" role="button" aria-controls="resepOffcanvas">Resep</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item text-danger" href="#!">Remove</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>2</td>
+                                        <td>VsdG8</td>
+                                        <td class="fw-bolder">C/Arco TA.1</td>
+                                        <td>Arco TA</td>
+                                        <td>1</td>
+                                        <td><span class="badge badge-phoenix badge-phoenix-warning">COAT</span></td>
+                                        <td>OTO</td>
+                                        <td><span class="badge badge-phoenix badge-phoenix-success me-1">E</span></td>
+                                        <td>27/11/23</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-middle white-space-nowrap pe-0 ps-4 btn-reveal-trigger">
+                                            <div class="font-sans-serif btn-reveal-trigger position-static">
+                                                <button class="btn btn-sm dropdown-toggle dropdown-caret-none transition-none btn-reveal fs--2" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent">
+                                                    <span class="fas fa-ellipsis-h fs--2"></span>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end py-2">
+                                                    <a class="dropdown-item" href="#!">View</a>
+                                                    <a class="dropdown-item" data-bs-toggle="offcanvas" href="#formulasiOffcanvas" role="button" aria-controls="formulasiOffcanvas">Edit</a>
+                                                    <a class="dropdown-item" data-bs-toggle="offcanvas" href="#resepOffcanvas" role="button" aria-controls="resepOffcanvas">Resep</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item text-danger" href="#!">Remove</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>3</td>
+                                        <td>VsdG8</td>
+                                        <td class="fw-bolder">D1/Prisca.1</td>
+                                        <td>Prisca</td>
+                                        <td>1</td>
+                                        <td><span class="badge badge-phoenix badge-phoenix-success">DIP 1</span></td>
+                                        <td>OTO</td>
+                                        <td><span class="badge badge-phoenix badge-phoenix-success me-1">E</span></td>
+                                        <td>27/11/23</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-middle white-space-nowrap pe-0 ps-4 btn-reveal-trigger">
+                                            <div class="font-sans-serif btn-reveal-trigger position-static">
+                                                <button class="btn btn-sm dropdown-toggle dropdown-caret-none transition-none btn-reveal fs--2" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent">
+                                                    <span class="fas fa-ellipsis-h fs--2"></span>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end py-2">
+                                                    <a class="dropdown-item" href="#!">View</a>
+                                                    <a class="dropdown-item" data-bs-toggle="offcanvas" href="#formulasiOffcanvas" role="button" aria-controls="formulasiOffcanvas">Edit</a>
+                                                    <a class="dropdown-item" data-bs-toggle="offcanvas" href="#resepOffcanvas" role="button" aria-controls="resepOffcanvas">Resep</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item text-danger" href="#!">Remove</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>4</td>
+                                        <td>VsdG8</td>
+                                        <td class="fw-bolder">D2/Prisca.1</td>
+                                        <td>Prisca</td>
+                                        <td>1</td>
+                                        <td><span class="badge badge-phoenix badge-phoenix-success">DIP 2</span></td>
+                                        <td>OTO</td>
+                                        <td><span class="badge badge-phoenix badge-phoenix-success me-1">E</span></td>
+                                        <td>27/11/23</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -84,7 +193,7 @@
                                         </td>
                                         <td>1</td>
                                         <td>VsdG8</td>
-                                        <td class="fw-bolder">C/PKKD.1/PMHC</td>
+                                        <td class="fw-bolder">PKKD.1/PMHC</td>
                                         <td>PKKD</td>
                                         <td>1</td>
                                         <td><span class="badge badge-phoenix badge-phoenix-warning">COAT</span></td>
@@ -111,7 +220,7 @@
                                         </td>
                                         <td>2</td>
                                         <td>VsdG8</td>
-                                        <td class="fw-bolder">C/PKKD.2/B5410</td>
+                                        <td class="fw-bolder">PKKD.2/B5410</td>
                                         <td>PKKD</td>
                                         <td>2</td>
                                         <td><span class="badge badge-phoenix badge-phoenix-warning">COAT</span></td>
@@ -138,7 +247,7 @@
                                         </td>
                                         <td>3</td>
                                         <td>VsdG8</td>
-                                        <td class="fw-bolder">D/SG8%.2/RG8</td>
+                                        <td class="fw-bolder">SG8%.2/RG8</td>
                                         <td>SG8%</td>
                                         <td>2</td>
                                         <td><span class="badge badge-phoenix badge-phoenix-success">DIP</span></td>
@@ -311,8 +420,8 @@
                 <label for="id">ID</label>
             </div>
             <div class="input-group mb-3">
-                    <span class="input-group-text" id="kode-awal">C/PKKD.1/</span>
-                    <input class="form-control" id="kode" type="text" aria-describedby="kode-awal" placeholder="Kode"/>
+                <span class="input-group-text" id="kode-awal">PKKD.1/</span>
+                <input class="form-control" id="kode" type="text" aria-describedby="kode-awal" placeholder="Kode" />
             </div>
             <div class="form-floating mb-3">
                 <input class="form-control" id="grup" name="grup" type="text" placeholder="Grup" />
@@ -325,7 +434,7 @@
                 <div class="invalid-feedback">Please choose a username.</div>
             </div>
             <div class="form-floating mb-3">
-                <select class="form-select" id="kategori" name="kategori" >
+                <select class="form-select" id="kategori" name="kategori">
                     <option value="" disabled>Pilih Kategori</option>
                     <option>DIP</option>
                     <option>COAT</option>
@@ -334,7 +443,7 @@
                 <div class="invalid-feedback">Please select one or multiple</div>
             </div>
             <div class="form-floating mb-3">
-                <select class="form-select" id="segmen" name="segmen" >
+                <select class="form-select" id="segmen" name="segmen">
                     <option value="" disabled>Pilih Segmen</option>
                     <option>INT</option>
                     <option>OTO</option>
@@ -343,7 +452,7 @@
                 <div class="invalid-feedback">Please select one or multiple</div>
             </div>
             <div class="form-floating mb-3">
-                <select class="form-select" id="status" name="status" >
+                <select class="form-select" id="status" name="status">
                     <option value="" disabled>Pilih Status</option>
                     <option>Efektif</option>
                     <option>Non-Efektif</option>
@@ -352,9 +461,9 @@
                 <div class="invalid-feedback">Please select one or multiple</div>
             </div>
             <div class="form-floating mb-3">
-            <input class="form-control datetimepicker flatpickr-input" id="datepicker" type="text" placeholder="dd/mm/yyyy" data-options="{&quot;disableMobile&quot;:true,&quot;dateFormat&quot;:&quot;d/m/Y&quot;}" readonly="readonly">
-            <label class="form-label" for="datepicker">Start Date</label>
-            </div>       
+                <input class="form-control datetimepicker flatpickr-input" id="datepicker" type="text" placeholder="dd/mm/yyyy" data-options="{&quot;disableMobile&quot;:true,&quot;dateFormat&quot;:&quot;d/m/Y&quot;}" readonly="readonly">
+                <label class="form-label" for="datepicker">Edate</label>
+            </div>
             <div class="form-floating mb-3">
                 <textarea class="form-control" id="deskripsi" placeholder="Deskripsi" style="height: 70px"></textarea>
                 <label for="deskripsi">Deskripsi</label>
@@ -368,7 +477,69 @@
 </div>
 <div class="offcanvas offcanvas-end" id="resepOffcanvas" tabindex="-1" aria-labelledby="resepOffcanvasLabel">
     <div class="offcanvas-header">
-        <h5 id="formulasiOffcanvasLabel">Resep Form</h5>
+        <h5 id="formulasiOffcanvasLabel">Resep - C/PKKD.2/B5410</h5>
+    </div>
+    <div class="offcanvas-body">
+        <form id="form-resep" action="">
+            <div class="d-flex bg-200 mb-3">
+                <div class="p-2 flex-grow-1">
+                    <div class="row row-cols-lg-2 g-1 align-items-center">
+                        <div class="col-12" hidden>
+                            <div class="form-floating mb-3">
+                                <input class="form-control-plaintext outline-none" id="id" name="id" type="text" readonly="" value="" />
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="sr-only" for="kimia_id">Single</label>
+                            <select class="form-select" id="kimia_id" data-choices="data-choices" data-options='{"removeItemButton":true,"placeholder":true}'>
+                                <option value="">Pilih Kimia</option>
+                                <option>Air</option>
+                                <option>Acetic Acid</option>
+                                <option>RA 940</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="sr-only" for="inlineFormInputGroupUsername">Persen</label>
+                            <div class="input-group">
+                                <input class="form-control" type="number" placeholder="Persen" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" />
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-phoenix-warning" type="button">Hapus </button>
+                            <button class="btn btn-primary" type="submit">Simpan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table cell-border display nowrap table-compact table-resep" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Kimia</th>
+                            <th>%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="d-flex justify-content-center">
+                                <a role="button" title="Edit"><span class="fa fa-edit me-3"></span></a>
+                                <a role="button" title="Remove"><span class="fa fa-trash text-danger"></span></a>
+                            </td>
+                            <td>Air</td>
+                            <td>82,25</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="offcanvas offcanvas-start" id="desainOffcanvas" tabindex="-1" aria-labelledby="desainOffcanvasLabel">
+    <div class="offcanvas-header">
+        <h5 id="desainOffcanvasLabel">Formulasi Form</h5>
     </div>
     <div class="offcanvas-body">
         <form id="form-kimiabaku" action="">
@@ -382,24 +553,59 @@
                 <input class="form-control-plaintext outline-none" id="id" name="id" type="text" readonly="" value="<?= random_string('alnum', 6) ?>" />
                 <label for="id">ID</label>
             </div>
+            <div class="input-group mb-3 d-flex">
+                <span class="input-group-text flex-fill" id="kode-awal">D/Arco TA.1/</span>
+                <select class="form-select flex-fill" id="kategori" name="kategori" data-choices="data-choices" data-options='{"removeItemButton":true,"placeholder":true}'>
+                    <option value="">Pilih Formulasi</option>
+                    <option>PKKD.1/PMHC</option>
+                    <option>PKKD.2/B5410</option>
+                    <option>SG8%.2/RG8</option>
+                </select>
+            </div>
             <div class="form-floating mb-3">
-                <input class="form-control" id="nama" name="nama" type="text" placeholder="Nama" />
-                <label for="nama">Nama</label>
+                <input class="form-control" id="grup" name="grup" type="text" placeholder="Grup" />
+                <label for="grup">Desain</label>
                 <div class="invalid-feedback">Please choose a username.</div>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="versi" name="versi" type="number" min="1" max="100" placeholder="Versi" />
+                <label for="versi">Versi</label>
+                <div class="invalid-feedback">Please choose a username.</div>
+            </div>
+            <div class="form-floating mb-3">
+                <select class="form-select" id="kategori" name="kategori">
+                    <option value="" disabled>Pilih Kategori</option>
+                    <option>DIP</option>
+                    <option>COAT</option>
+                </select>
+                <label for="kategori">Kategori</label>
+                <div class="invalid-feedback">Please select one or multiple</div>
+            </div>
+            <div class="form-floating mb-3">
+                <select class="form-select" id="segmen" name="segmen">
+                    <option value="" disabled>Pilih Segmen</option>
+                    <option>INT</option>
+                    <option>OTO</option>
+                </select>
+                <label for="segmen">Segmen</label>
+                <div class="invalid-feedback">Please select one or multiple</div>
+            </div>
+            <div class="form-floating mb-3">
+                <select class="form-select" id="status" name="status">
+                    <option value="" disabled>Pilih Status</option>
+                    <option>Efektif</option>
+                    <option>Non-Efektif</option>
+                </select>
+                <label for="status">Status</label>
+                <div class="invalid-feedback">Please select one or multiple</div>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control datetimepicker flatpickr-input" id="datepicker" type="text" placeholder="dd/mm/yyyy" data-options="{&quot;disableMobile&quot;:true,&quot;dateFormat&quot;:&quot;d/m/Y&quot;}" readonly="readonly">
+                <label class="form-label" for="datepicker">Edate</label>
             </div>
             <div class="form-floating mb-3">
                 <textarea class="form-control" id="deskripsi" placeholder="Deskripsi" style="height: 70px"></textarea>
                 <label for="deskripsi">Deskripsi</label>
-            </div>
-            <div class="mb-3">
-                <select class="form-select" id="tag_proses" multiple="multiple" size="1" name="tag_proses" required="required">
-                    <!-- <option value="">TAG PROSES</option>
-                    <option>DIP</option>
-                    <option>COAT</option>
-                    <option>CF</option>
-                    <option>SPRAY</option> -->
-                </select>
-                <div class="invalid-feedback">Please select one or multiple</div>
             </div>
             <div class="form-check form-switch float-end mb-3">
                 <input class="form-check-input" id="alur_stok" type="checkbox" />
