@@ -73,6 +73,96 @@ $(document).ready(function () {
     search: {
       regex: true,
     },
+    processing: true,
+    serverSide: true,
+    ajax: {
+      url: base_url + "/api/master/kimia",
+    },
+    columns: [
+      {
+        data: "id",
+        class:
+          "text-center align-middle white-space-nowrap pe-0 ps-4 btn-reveal-trigger",
+        width: "5%",
+        render: function (data, type, row) {
+          if (row.deleted_at == null) {
+            var menu =
+              '<div class="font-sans-serif btn-reveal-trigger position-static">' +
+              '<button class="btn btn-sm dropdown-toggle dropdown-caret-none transition-none btn-reveal fs--2" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent">' +
+              '<span class="fas fa-ellipsis-h fs--2"></span>' +
+              "</button>" +
+              '<div class="dropdown-menu dropdown-menu-end py-2">' +
+              '<a class="dropdown-item" href="javascript:void(0)">View</a>' +
+              '<a class="dropdown-item" data-bs-toggle="offcanvas" href="#formulasiOffcanvas" role="button" aria-controls="formulasiOffcanvas">Edit</a>' +
+              '<a class="dropdown-item" data-bs-toggle="offcanvas" href="#resepOffcanvas" role="button" aria-controls="resepOffcanvas">Resep</a>' +
+              '<div class="dropdown-divider"></div>' +
+              '<a class="dropdown-item text-danger" href="javascript:void(0)">Remove</a>' +
+              "</div>" +
+              "</div>";
+          }
+          return menu;
+        },
+      },
+      {
+        data: "no",
+        width: "5%",
+      },
+      {
+        data: "id",
+        visible: false,
+        width: "10%",
+      },
+      {
+        data: "nama",
+        width: "30%",
+      },
+      {
+        data: "deskripsi",
+      },
+      {
+        data: "tag_proses",
+        width: "15%",
+        fnCreatedCell: function (nTd, sData, oData, iRow, iCol) {
+          if (sData) {
+            var arr = sData.split(",");
+
+            var tag = "";
+            for (let i = 0; i < arr.length; i++) {
+              switch (arr[i]) {
+                case "DIP":
+                  color = "success";
+                  break;
+
+                case "COAT":
+                  color = "warning";
+                  break;
+              }
+              tag +=
+                '<span class="badge badge-phoenix badge-phoenix-' +
+                color +
+                '">' +
+                arr[i] +
+                "</span> ";
+            }
+            return $(nTd).html(tag);
+          }
+          return false;
+        },
+      },
+      {
+        data: "alur_stok",
+        class: "text-center",
+        width: "10%",
+        render: function (data, type, row) {
+          if (data == "Y") {
+            var status = '<i class="fa fa-check text-success"></i>';
+          } else {
+            var status = '<i class="fa fa-times text-danger"></i>';
+          }
+          return status;
+        },
+      },
+    ],
     buttons: [
       {
         text: "<i class='fa fa-plus'></i> Tambah Kimia",
@@ -309,24 +399,6 @@ $(document).ready(function () {
     placeholderValue: "Tag Proses",
   });
 
-  choicesTagProses.setChoices(
-    [
-      {
-        value: "Option 1",
-        label: "Option 1",
-        selected: true,
-        disabled: false,
-      },
-      {
-        value: "Option 2",
-        label: "Option 2",
-        selected: false,
-      },
-    ],
-    "value",
-    "label",
-    false
-  );
   function formReset() {
     var form = $("#form-kimiabaku");
     form.find(":input").val(null);
@@ -339,5 +411,55 @@ $(document).ready(function () {
   });
   $("#batal").click(function () {
     $("#kimiaOffcanvas").offcanvas("hide");
+  });
+
+  //SUBMIT
+  $("#form-kimiabaku").on("submit", function (e) {
+    e.preventDefault();
+    var form = $(this);
+    var btn_text = form.find(":submit").text();
+    var id = $(form).find("#id").val();
+    var data = form.serialize();
+
+    switch (btn_text) {
+      case "Update":
+        var api_url = base_url + "/api/master/kimia/" + id;
+        var typeAjax = "PUT";
+        break;
+
+      default:
+        var api_url = base_url + "/api/master/kimia";
+        var typeAjax = "POST";
+        break;
+    }
+
+    $.ajax({
+      url: api_url,
+      type: typeAjax,
+      dataType: "JSON",
+      data: data,
+      success: function (data, status) {
+        $(form).find(".invalid-feedback").removeClass("invalid-feedback");
+        if (data.errors === null) {
+          $(form)[0].reset();
+          tb_kimiabaku.ajax.reload(null, false);
+          $(form).find("#id").val(data.new_id);
+          $(form).find(":submit").text("Save");
+          $(form).find("#nama").focus();
+          // toastr["success"](data.messages.success, status);
+        }
+      },
+      error: function (xhr, status) {
+        $(form).find(".invalid-feedback").removeClass("invalid-feedback");
+        $.each(xhr.responseJSON.messages, function (prefix, val) {
+          $(form)
+            .find("#" + prefix)
+            .addClass("is-invalid");
+          $(form)
+            .find(".inv-" + prefix + "")
+            .text(val);
+        });
+      },
+    });
   });
 });

@@ -19,12 +19,12 @@ class Database extends Config
      * Lets you choose which connection group to
      * use if no other is specified.
      */
-    public string $defaultGroup = 'default';
+    public string $defaultGroup = 'gfinishing';
 
     /**
      * The default database connection.
      */
-    public array $default = [
+    public array $gfinishing = [
         'DSN'          => '',
         'hostname'     => 'localhost',
         'username'     => '',

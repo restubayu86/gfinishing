@@ -7,6 +7,12 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Templates::index');
 
+$routes->group('api', static function ($routes) {
+    $routes->group('master', static function ($routes) {
+        $routes->resource('kimia', ['controller' => 'Api\Master\Kimia']);
+    });
+});
+
 $routes->group('master', static function ($routes) {
     $routes->get('item', 'Master\Item::index');
     $routes->get('umum', 'Master\Umum::index');
